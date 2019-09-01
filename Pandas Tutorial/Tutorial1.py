@@ -1,3 +1,4 @@
+#Intro to DataFrames
 #Following tutorial found at https://youtu.be/e60ItwlZTKM
 
 import numpy as np
@@ -81,6 +82,16 @@ header("df.iloc[3:5,[0:3]]")
 print(df.iloc[3:5,[0,3]])   #rows 3-5 and columns 0-3
 
 
+header("8. Filtering")
+header("df[df.avg_precipitation > 1.0]")
+print(df[df.avg_precipitation > 1.0])
 
+header("df[df['month'].isin(['Jun','Jul','Aug'])]")
+print(df[df['month'].isin(['Jun','Jul','Aug'])])    #months which are in the list [Jun, Jul, Aug]
+
+header("9.Assignment")
+header("df.loc[9,['avg_precipitation']] = 101.3")
+df.loc[9,['avg_precipitation']] = 101.3
+print(df.iloc[9:11])
 
 
